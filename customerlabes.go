@@ -20,7 +20,7 @@ func main() {
 	go worker()
 
 	router := http.NewServeMux()
-	router.HandleFunc("/https://webhook.site/183f3bce-44bb-474f-b94d-dcfdec51f1f3", ProcessHandler)
+	router.HandleFunc("/process", ProcessHandler)
 	server := &http.Server{
 		Addr:    ":8010",
 		Handler: router,
